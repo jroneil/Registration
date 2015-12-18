@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Registration Form</title>
+<script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="../js/jquery-ui-1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="../js/jquery-ui-1.11.4/jquery-ui.css"/>
+<link rel="stylesheet" type="text/css" href="css/reg.css"/>
+
+<script type="text/javascript"
+	src="../js/DataTables-1.10.9/media/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="../js/reg.js"></script>
+</head>
+<body>
+<form action="#" th:action="@{/users}" th:object="${user}" method="post">
+
+<div >
+   <label class="block" >First Name</label>
+ <input class="block" id="firstName" th:field="*{firstName}"/>
+ <label class="block">Last Name</label>
+ <input class="block" id="lastName" th:field="*{lastName}"/>
+ <label class="block">Address1</label>
+ <input class="block" id="address1" th:field="*{address1}"/>
+ <label class="block">address2</label>
+ <input class="block" id="address2" th:field="*{address2}"/>
+ <label class="block">City</label>
+ <input class="block" id="city" th:field="*{city}"/>
+ <label class="block">state</label>
+ <input class="block" id="state" th:field="*{state}"/>
+ <label class="block">Zip</label>
+ <input class="block" id="Zip" th:field="*{zip}"/>
+ <label class="block">Email</label>
+ <input class="block" id="email" th:field="*{email}"/>
+ <label class="block">Confirm Email</label>
+ <input class="block" id="cemail" th:field="*{cemail}"/>
+ 
+ 
+</div>
+   <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+ <div th:include="footer :: footer"></div>
+</form>
+</body>
+</html>
